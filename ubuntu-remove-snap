@@ -1,0 +1,5 @@
+sudo snap remove --purge firefox;sudo snap remove --purge firmware-updater;sudo snap remove --purge desktop-security-center;sudo snap remove --purge prompting-client;sudo snap remove --purge snap-store;sudo snap remove --purge gnome-42-2204;sudo snap remove --purge gtk-common-themes;sudo snap remove --purge snapd-desktop-integration;sudo snap remove --purge bare;sudo snap remove --purge core22;sudo snap remove --purge snapd;sudo apt remove --autoremove snapd;sudo -H nano /etc/apt/preferences.d/nosnap.pref;sudo apt update;sudo apt install --install-suggests gnome-software -y
+
+Package: snapd
+Pin: release a=*
+Pin-Priority: -10
