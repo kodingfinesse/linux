@@ -38,11 +38,5 @@ rm -rf /usr/share/man/??_*
 find /var/log -type f -regex ".*\.gz$" | xargs rm -Rf
 find /var/log -type f -regex ".*\.[0-9]$" | xargs rm -Rf
 
-#Cleaning the old kernels
-dpkg-query -l|grep linux-im*
-#dpkg-query -l |grep linux-im*|awk '{print $2}'
-apt-get purge $(dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | head -n -1) --assume-yes
-apt-get install linux-headers-`uname -r|cut -d'-' -f3`-`uname -r|cut -d'-' -f4`
-
 #Cleaning is completed
 echo "Cleaning is completed"
