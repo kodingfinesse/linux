@@ -1,6 +1,1 @@
-sudo add-apt-repository universe;sudo add-apt-repository multiverse;sudo apt update
-sudo add-apt-repository ppa:aglasgall/pipewire-extra-bt-codecs
-sudo apt install pipewire-audio-client-libraries libspa-0.2-bluetooth libspa-0.2-jack
-sudo apt install wireplumber pipewire-media-session-
-sudo apt remove pulseaudio-module-bluetooth
-systemctl --user --now enable wireplumber.service;systemctl --user --now enable pipewire.service
+sudo add-apt-repository universe;sudo add-apt-repository multiverse;sudo apt update;sudo add-apt-repository ppa:aglasgall/pipewire-extra-bt-codecs;sudo apt install pipewire-audio-client-libraries libspa-0.2-bluetooth libspa-0.2-jack;sudo apt install wireplumber pipewire-media-session- && sudo apt remove pulseaudio-module-bluetooth;systemctl --user --now enable wireplumber.service;systemctl --user --now enable pipewire.service
